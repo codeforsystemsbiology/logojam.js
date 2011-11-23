@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Logojam</title>
+
+<script type="text/javascript" src="logojam.js"></script>
+<script>
+	function onload(){
+		var logoer = new org.systemsbiology.visualization.logojam(document.getElementById("container"),{width:800,height:200});
+		
+		for(var i=0;i<20;i++){
+			var randomcolor = '#'+Math.floor(Math.random()*16777215).toString(16);
+			var randomscale = Math.random()*2;
+			logoer.drawLetter("A",randomcolor,randomscale,i*20,50/randomscale);
+
+		}
+	}
+</script>
+</head>
+<body onload="onload()">
+<div id="container">
+</div>
+</body>
+
+</html>
